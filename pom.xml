@@ -38,11 +38,6 @@
 				<groupId>org.thymeleaf</groupId>
 				<artifactId>thymeleaf</artifactId>
 				<version>${thymeleaf.version}</version>
-				<exclusions>
-					<exclusion>
-						<artifactId>servet-*</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.thymeleaf</groupId>
@@ -54,6 +49,12 @@
 				<artifactId>thymeleaf-testing</artifactId>
 				<version>${thymeleaf.version}</version>
 				<scope>test</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 		</dependencies>
